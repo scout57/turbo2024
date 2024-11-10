@@ -1,0 +1,9 @@
+version: '3.7'
+services:
+  app:
+    image: python:3.12-slim
+    restart: "no"
+    volumes:
+      - ./app:/project/app
+    working_dir: /project/app
+    command: [ sh, -c, "tail -f /dev/null" ]
